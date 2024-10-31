@@ -1,0 +1,17 @@
+@import url("color.css");
+@import url("font.css");
+@import url("header.css");
+@import url("banner.css");
+@import url("carrossel.css");
+@import url("topicos.css");
+@import url("contato.css");
+@import url("footer.css");
+
+body{
+    background-color: var(--cor-de-fundo);
+    font-family: var(--font-primaria);
+}
+
+
+
+

@@ -1,0 +1,174 @@
+.menu__cabecalho-hamburger{
+    width: 3rem;
+    height: 3rem;
+    background-image: url("../image/Menu.svg");
+    display: inline-block;
+}
+
+.menu{
+    background-color: var(--cor-do-menu);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.container a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.25rem
+}
+
+.container a p{
+    display: none;
+}
+
+.menu__cabecalho-hamburger{
+    padding: .5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.lista-menu{
+    display: none;
+    background-color: var(--cor-do-menu);
+    position: absolute;
+    top: 100%;
+    width: 50vw;
+    z-index: 99999;
+}
+
+.container__botao{
+    display: none;
+}
+
+.container__botao:checked ~ .lista-menu{
+    display: block;
+}
+
+.container__botao:checked ~ .container__rotulo > .menu__cabecalho-hamburger{
+    background-image: url("../image/menu_white.svg");
+}
+
+.container__botao:checked ~ .container__rotulo{
+     background: var(--azul-degrade);
+}
+
+.lista-menu__titulo, .lista-menu__item{
+    text-decoration: none;
+    padding: 20px;
+}
+
+.lista-menu__titulo{
+    color: var(--cor-menu-titulo);
+    font-weight: 600;
+}
+
+
+.lista-menu li a{
+    text-decoration: none;
+    color: var(--cor-menu-item);
+    font-weight: 400;
+}
+
+/* Menu desktop*/
+
+.container-desktop{
+    display: none;
+}
+
+.logo__text{
+    display: none;
+}
+
+.desktop__lista{
+    display: flex;
+}
+
+.desktop__lista-link{
+    padding: 1.2rem;
+    text-decoration: none;
+}
+
+.desktop__lista-link a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+.desktop__lista-link:hover{
+    cursor: pointer;
+    user-select: none;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+
+   .container-desktop{
+        display: block;
+   }
+
+   .menu__cabecalho-hamburger{
+        display: none;
+   }
+
+   .logo__text{
+        display: block;
+        font-size: 1.875rem;
+   }
+
+   .logo__text-strong{
+        font-weight: 700;
+   }
+
+   .desktop__botao:checked ~ .lista-menu{
+        display: block;
+        width: auto;
+   }
+
+   .desktop__botao{
+        display: none;
+   }
+
+   .container__favorito{
+        display: none;
+   }
+
+
+   .lista-menu__item:hover{
+        background: var(--azul-degrade);
+       
+    }
+
+    .lista-menu__item:hover > .desktop__lista-link{
+        color: white;
+    }
+
+    .desktop__botao:checked ~ .desktop__rotulo{
+        background: var(--azul-degrade);
+        color: var(--cor-text-branco);
+   }
+  
+}
+
+@media screen and (min-width: 1728px) {
+
+
+    .container-desktop{
+        margin-right: auto;
+        margin-left: 5%;
+    }
+    
+    .container a p{
+        display: block;
+        margin: 0 .625rem 0 .625rem;
+    }
+
+}
